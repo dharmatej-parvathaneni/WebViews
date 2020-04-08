@@ -9,30 +9,36 @@
 import UIKit
 import WebKit
 
+struct CustomViewConfig {
+    var url: URL
+    var cookies: [HTTPCookie]?
+    var userContentName: String
+    var scriptHandler: ((Any) -> Void)?
+}
+
 class WebViewController: UIViewController, WKUIDelegate {
     var webView: WKWebView!
     var webViewConfig = WKWebViewConfiguration()
     var urlToLoad: URL!
     var userContentHandler: ((Any) -> Void)? = nil
 
-    func initializeWebView(url: URL, cookies: [HTTPCookie], userContentName: String, scriptHandler: ((Any) -> Void)? = nil) {
+    func initializeWebView(viewConfig: CustomViewConfig) {
         // URL to Load
-        self.urlToLoad = url
+        self.urlToLoad = viewConfig.url
 
         // Set Cookies
-        for cookie in cookies {
-            webViewConfig.websiteDataStore.httpCookieStore.setCookie(cookie, completionHandler: nil)
-            HTTPCookieStorage.shared.setCookie(cookie)
+        if viewConfig.cookies != nil {
+            for cookie in viewConfig.cookies! {
+                webViewConfig.websiteDataStore.httpCookieStore.setCookie(cookie, completionHandler: nil)
+            }
         }
 
         // Set Method name to leverage from Web Content
-        webViewConfig.userContentController.add(self, name: userContentName)
+        webViewConfig.userContentController.add(self, name: viewConfig.userContentName)
         
         // Set Content Handler from Web to Native
-        self.userContentHandler = scriptHandler
-        
-        
-    }
+        self.userContentHandler = viewConfig.scriptHandler
+}
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)

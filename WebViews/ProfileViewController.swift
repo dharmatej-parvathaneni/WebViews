@@ -8,11 +8,16 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: WebViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        super.initializeWebView(viewConfig: CustomViewConfig(
+            url: URL(string: "http://192.168.1.246:4200/")!,
+            cookies: nil,
+            userContentName: "ProfileView",
+            scriptHandler: nil))
     }
 
 

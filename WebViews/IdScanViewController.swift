@@ -38,7 +38,11 @@ class IdScanViewController: WebViewController {
             self.present(alert, animated: true)
         }
         
-        super.initializeWebView(url: URL(string: "http://192.168.1.246:4200/stand-alone/id-scan")!, cookies: [cookie], userContentName: "IDScanResults", scriptHandler: userContentHandler)
+        super.initializeWebView(viewConfig: CustomViewConfig(
+            url: URL(string: "http://192.168.1.246:4200/stand-alone/id-scan")!,
+            cookies: [cookie],
+            userContentName: "IDScanResults",
+            scriptHandler: userContentHandler))
     }
 
 }
