@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E6AE99B2441366200307188 /* ContactFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6AE99A2441366200307188 /* ContactFormViewController.swift */; };
+		8E84EA522444CF290031E062 /* RegIDScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E84EA512444CF290031E062 /* RegIDScanViewController.swift */; };
 		8E8E07EB243E17D900DA833F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E07EA243E17D900DA833F /* AppDelegate.swift */; };
 		8E8E07ED243E17D900DA833F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E07EC243E17D900DA833F /* SceneDelegate.swift */; };
 		8E8E07EF243E17D900DA833F /* IdScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E07EE243E17D900DA833F /* IdScanViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E6AE99A2441366200307188 /* ContactFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewController.swift; sourceTree = "<group>"; };
+		8E84EA512444CF290031E062 /* RegIDScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegIDScanViewController.swift; sourceTree = "<group>"; };
 		8E8E07E7243E17D900DA833F /* WebViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8E07EA243E17D900DA833F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E8E07EC243E17D900DA833F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 				8E8E07F7243E17DA00DA833F /* LaunchScreen.storyboard */,
 				8E8E07FA243E17DA00DA833F /* Info.plist */,
 				8E8E080E243E188A00DA833F /* WebViewController.swift */,
+				8E6AE99A2441366200307188 /* ContactFormViewController.swift */,
+				8E84EA512444CF290031E062 /* RegIDScanViewController.swift */,
 			);
 			path = WebViews;
 			sourceTree = "<group>";
@@ -208,8 +214,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E8E07F1243E17D900DA833F /* ProfileViewController.swift in Sources */,
+				8E84EA522444CF290031E062 /* RegIDScanViewController.swift in Sources */,
 				8E8E07EF243E17D900DA833F /* IdScanViewController.swift in Sources */,
 				8E8E07EB243E17D900DA833F /* AppDelegate.swift in Sources */,
+				8E6AE99B2441366200307188 /* ContactFormViewController.swift in Sources */,
 				8E8E080F243E188A00DA833F /* WebViewController.swift in Sources */,
 				8E8E07ED243E17D900DA833F /* SceneDelegate.swift in Sources */,
 			);

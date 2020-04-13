@@ -14,12 +14,10 @@ class ProfileViewController: WebViewController {
         super.init(coder: coder)
         
         super.initializeWebView(viewConfig: CustomViewConfig(
-            url: URL(string: "http://192.168.1.246:4200/")!,
+            url: URL(string: "http://192.168.1.100:4200/")!,
             cookies: nil,
             userContentName: "ProfileView",
             scriptHandler: nil))
     }
-
-
 }
 
